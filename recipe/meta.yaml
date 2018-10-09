@@ -1,4 +1,4 @@
-{% set version = '1.5.5' %}
+{% set version = "1.5.6" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/DiceKriging_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/DiceKriging/DiceKriging_{{ version }}.tar.gz
-  sha256: 55fe161f867a0c3772023c3047041b877aa54d29cb474ec87293ec31cc5cb30c
+  sha256: 25466d2db9f17083d1c7b9545e5ec88f630be934f9373c2f7b36c38de4e64e92
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   skip: true  # [win32]
 
   rpaths:
