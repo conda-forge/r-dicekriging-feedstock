@@ -16,7 +16,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1000
   skip: true  # [win32]
 
   rpaths:
@@ -43,8 +43,7 @@ about:
   home: https://CRAN.R-project.org/package=DiceKriging
   license: GPL-2 | GPL-3
   license_family: GPL
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
   summary: Estimation, validation and prediction of kriging models.
 
 extra:
