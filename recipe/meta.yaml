@@ -1,4 +1,4 @@
-{% set version = "1.5.6" %}
+{% set version = "1.5.8" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/DiceKriging_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/DiceKriging/DiceKriging_{{ version }}.tar.gz
-  sha256: 25466d2db9f17083d1c7b9545e5ec88f630be934f9373c2f7b36c38de4e64e92
+  sha256: 11d02b894cb509dbb8887ae27b6d08ba25aa52ac3ece134c3759c2b3b1bf4d77
 
 build:
-  merge_build_host: True  # [win]
-  number: 1002
+  merge_build_host: true  # [win]
+  number: 0
   skip: true  # [win32]
 
   rpaths:
@@ -43,7 +43,7 @@ about:
   home: https://CRAN.R-project.org/package=DiceKriging
   license: GPL-2 | GPL-3
   license_family: GPL
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
   summary: Estimation, validation and prediction of kriging models.
 
 extra:
