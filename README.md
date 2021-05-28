@@ -3,7 +3,7 @@ About r-dicekriging
 
 Home: https://CRAN.R-project.org/package=DiceKriging
 
-Package license: GPL-2 | GPL-3
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dicekriging-feedstock/blob/master/LICENSE.txt)
 
@@ -132,6 +132,7 @@ Installing `r-dicekriging` from the `conda-forge` channel can be achieved by add
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-dicekriging` can be installed with:
@@ -210,5 +211,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 * [@jschueller](https://github.com/jschueller/)
 
