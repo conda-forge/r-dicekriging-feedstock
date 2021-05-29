@@ -45,3 +45,4 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - jschueller
+    - conda-forge/r
