@@ -19,10 +19,16 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - {{ compiler('c') }}        # [unix]
     - {{ stdlib("c") }}          # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ stdlib("m2w64_c") }}    # [win]
+    - {{ posix }}filesystem      # [win]
+    - {{ posix }}make
+    - {{ posix }}sed             # [win]
+    - {{ posix }}coreutils       # [win]
+    - {{ posix }}zip             # [win]
   host:
     - r-base
   run:
@@ -38,10 +44,11 @@ about:
   license: GPL-2.0-or-later
   license_family: GPL
   summary: Estimation, validation and prediction of kriging models.
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
     - jschueller
-    - conda-forge/r
