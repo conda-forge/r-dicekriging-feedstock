@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DiceKriging_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DiceKriging/DiceKriging_{{ version }}.tar.gz
-  sha256: ab5d1332809f2bb16d156ed234b102eb9fbd6de792e4291f9f6ea4652215cb49
+  sha256: 4c65dc2abd006fc3d3e07f97f4fe6571ff822f4e4ecce00e769fc9c0651c1ad2
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
