@@ -12,5 +12,6 @@ github:
 provider:
   linux_aarch64: azure
   linux_ppc64le: azure
+  osx_arm64: default
   win: azure
 test: native_and_emulated
